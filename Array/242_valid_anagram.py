@@ -1,0 +1,28 @@
+# sorted approach gives O(nlogn)
+# Optimal approach is using hashmap with O(n)
+
+def isAnagram(s, t):
+    if len(s) != len(t):
+        return False
+
+    count = {}
+
+    for ch in s:
+        count[ch] = count.get(ch, 0) + 1
+
+    for ch in t:
+        if ch not in count:
+            return False
+
+        count[ch] -= 1
+
+        if count[ch] < 0:
+            return False
+
+    return True
+
+# Pythonic smaller solution 
+from collections import Counter
+
+def isAnagram(s, t):
+    return Counter(s) == Counter(t)
