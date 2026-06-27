@@ -1,5 +1,5 @@
 class Solution:
-    def largestAltitude(self, gain: List[int]) -> int:
+    def largestAltitude(gain):
         altitude = 0
         highest = 0
 
