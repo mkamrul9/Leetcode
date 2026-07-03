@@ -1,8 +1,8 @@
-class Solution:
-    def getConcatenation(nums):
-        n = len(nums)
-        res = [0] * 2 * n
+
+def getConcatenation(nums):
+    n = len(nums)
+    res = [0] * 2 * n
         
-        for i in range(2 * n):
-            res[i] = nums[i % n]
-        return res
+    for i in range(2 * n):
+        res[i] = nums[i % n]
+    return res
